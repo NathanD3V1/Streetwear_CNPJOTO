@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THE CNPJOTO STREET</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Supabase SDK (via CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/client.css">
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="dark-theme">
+    <!-- Cursor Glow Effect -->
+    <div id="cursor-glow"></div>
+    
+    <!-- Background Particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="main-nav" class="navbar">
+        <div class="nav-brand">
+            <a href="#" data-route="home" class="glitch-text" data-text="THE CNPJOTO STREET">THE CNPJOTO STREET</a>
+        </div>
+        <div class="nav-links">
+            <a href="#" data-route="catalog">CATÁLOGO</a>
+            <a href="#" data-route="cart" id="nav-cart-btn">🛒 CARRINHO <span id="cart-count" class="badge hidden">0</span></a>
+            <a href="#" data-route="wishlist" id="nav-wishlist-btn">❤️ DESEJOS <span id="wishlist-count" class="badge hidden">0</span></a>
+            <a href="#" data-route="login" id="nav-login-btn">LOGIN</a>
+            <a href="#" data-route="admin" id="nav-admin-btn" class="hidden text-neon">⚙️ ADMIN</a>
+            <a href="#" id="nav-logout-btn" class="hidden">SAIR</a>
+        </div>
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn">☰</button>
+    </nav>
+
+    <!-- Main Content Area (SPA Routing) -->
+    <main id="app-content">
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title glitch-text" data-text="VISTA A RUA">VISTA A RUA</h1>
+                <p class="hero-subtitle">The Cnpjoto Street — Estilo Underground</p>
+                <a href="#catalog" class="btn btn-neon">EXPLORAR COLEÇÃO →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Global Modals (e.g., Notifications) -->
+    <div id="toast-container"></div>
+
+    <!-- JS Scripts (ES Modules) -->
+    <script type="module" src="js/app.js?v=8"></script>
+</body>
+</html>
