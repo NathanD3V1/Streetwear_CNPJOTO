@@ -4,11 +4,20 @@ export const SIZE_SETS = {
   clothing: ['P', 'M', 'G', 'GG'],
   shoes: ['38', '39', '40', '41', '42', '43'],
   oneSize: ['ÚNICO'],
+  kids: ['2', '4', '6', '8', '10', '12'],
+  plus: ['G1', 'G2', 'G3', 'G4', 'G5'],
+  intimate_m: ['P', 'M', 'G', 'GG', 'XG'],
+  intimate_f: ['PP', 'P', 'M', 'G', 'GG'],
+  dress: ['PP', 'P', 'M', 'G', 'GG'],
 };
 
 export function getSizesForCategory(category) {
   if (category === 'tenis') return SIZE_SETS.shoes;
   if (['bones', 'acessorios'].includes(category)) return SIZE_SETS.oneSize;
+  if (category === 'infantil') return SIZE_SETS.kids;
+  if (category === 'plus_size') return SIZE_SETS.plus;
+  if (category === 'intimo') return SIZE_SETS.intimate_f;
+  if (['vestidos', 'saias'].includes(category)) return SIZE_SETS.dress;
   return SIZE_SETS.clothing;
 }
 
